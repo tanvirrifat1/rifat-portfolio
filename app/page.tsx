@@ -47,6 +47,9 @@ import Image from "next/image";
 import { FaUbuntu } from "react-icons/fa6";
 import { SiHostinger } from "react-icons/si";
 import rifat from "../assets/rifatdb.jpeg";
+import holy from "../assets/holy.png";
+import hotTube from "../assets/hot-tube.png";
+import baby from "../assets/baby-sitter.png";
 
 export default function Portfolio() {
   const homeRef = useRef<any>(null);
@@ -1573,12 +1576,12 @@ export default function Portfolio() {
                 <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                   <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
-                    <motion.img
-                      src="/placeholder.svg?height=400&width=600"
+                    <Image
+                      src={holy}
                       alt="Project 2"
+                      width={100}
+                      height={100}
                       className="object-cover w-full h-full"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
                     />
                   </div>
                   <CardContent className="p-4 sm:p-6">
@@ -1641,12 +1644,12 @@ export default function Portfolio() {
                 <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                   <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
-                    <motion.img
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="Project 1"
+                    <Image
+                      src={hotTube}
+                      alt="Project 2"
+                      width={100}
+                      height={100}
                       className="object-cover w-full h-full"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
                     />
                   </div>
                   <CardContent className="p-4 sm:p-6">
@@ -1704,12 +1707,12 @@ export default function Portfolio() {
                 <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                   <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
-                    <motion.img
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="Project 3"
+                    <Image
+                      src={baby}
+                      alt="Project 2"
+                      width={100}
+                      height={100}
                       className="object-cover w-full h-full"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
                     />
                   </div>
                   <CardContent className="p-4 sm:p-6">
@@ -1753,13 +1756,6 @@ export default function Portfolio() {
               </motion.div>
             </FadeIn>
           </div>
-
-          <FadeIn delay={0.4} className="flex justify-center mt-8 sm:mt-10">
-            <AnimatedButton variant="outline" size="lg" className="gap-2">
-              View All Projects
-              <ChevronRight className="h-4 w-4" />
-            </AnimatedButton>
-          </FadeIn>
         </div>
       </section>
 
