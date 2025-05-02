@@ -16,11 +16,9 @@ import {
   ChevronRight,
   Terminal,
   Globe,
-  Cpu,
   Cloud,
   Monitor,
   Layers,
-  Zap,
   Menu,
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -855,7 +853,7 @@ export default function Portfolio() {
                                 delay: 0.2 + i * 0.1,
                               }}
                               className={`h-2 flex-1 rounded-full origin-left ${
-                                i < 4 ? "bg-primary" : "bg-primary/30"
+                                i < 3 ? "bg-primary" : "bg-primary/30"
                               }`}
                             />
                           ))}
@@ -877,7 +875,7 @@ export default function Portfolio() {
                                 delay: 0.4 + i * 0.1,
                               }}
                               className={`h-2 flex-1 rounded-full origin-left ${
-                                i < 4 ? "bg-primary" : "bg-primary/30"
+                                i < 3 ? "bg-primary" : "bg-primary/30"
                               }`}
                             />
                           ))}
@@ -1341,7 +1339,7 @@ export default function Portfolio() {
                   <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
                     <CardContent className="p-4 sm:p-6">
                       <StaggerChildren>
-                        <ul className="space-y-2 -mb-16 ">
+                        <ul className="space-y-2 ">
                           <StaggerItem>
                             <li className="flex items-start gap-2">
                               <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -2078,9 +2076,9 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold">
-                    JD
+                    RM
                   </div>
-                  <div className="font-bold text-xl">John Doe</div>
+                  <div className="font-bold text-xl">Rifat Miah</div>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base max-w-xs">
                   A passionate backend developer with full stack experience,
@@ -2088,7 +2086,8 @@ export default function Portfolio() {
                 </p>
                 <div className="flex items-center gap-4">
                   <motion.a
-                    href="#"
+                    href="https://github.com/tanvirrifat1"
+                    target="_blank"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
@@ -2097,7 +2096,8 @@ export default function Portfolio() {
                     <span className="sr-only">GitHub</span>
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.linkedin.com/in/md-rifat-miah-48555b257"
+                    target="_blank"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
@@ -2106,7 +2106,8 @@ export default function Portfolio() {
                     <span className="sr-only">LinkedIn</span>
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="mailto:rifatmiah373@gmail.com"
+                    target="_blank"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
@@ -2205,7 +2206,10 @@ export default function Portfolio() {
                     placeholder="Your email"
                     className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   />
-                  <AnimatedButton type="submit" className="sm:w-auto">
+                  <AnimatedButton
+                    onClick={() => alert("Subscribed!")}
+                    className="sm:w-auto"
+                  >
                     Subscribe
                   </AnimatedButton>
                 </motion.form>
@@ -2221,7 +2225,7 @@ export default function Portfolio() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <p className="text-center text-xs sm:text-sm text-muted-foreground md:text-left">
-              © {new Date().getFullYear()} John Doe. All rights reserved.
+              © {new Date().getFullYear()} Rifat Miah. All rights reserved.
             </p>
             <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground">
               <motion.a
