@@ -50,6 +50,7 @@ import rifat from "../assets/rifatdb.jpeg";
 import holy from "../assets/holy.png";
 import hotTube from "../assets/hot-tube.png";
 import baby from "../assets/baby-sitter.png";
+import emailjs from "@emailjs/browser";
 
 export default function Portfolio() {
   const homeRef = useRef<any>(null);
@@ -242,6 +243,54 @@ export default function Portfolio() {
       </SheetContent>
     </Sheet>
   );
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    console.log(formData);
+    e.preventDefault();
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "", // ⬅️ Replace with actual EmailJS Service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "", // ⬅️ Replace with actual Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "" // ⬅️ Replace with actual Public Key
+      );
+
+      console.log("Email sent successfully:", result.text);
+      alert("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Email send failed:", error);
+      alert("Failed to send message.");
+    }
+  };
 
   return (
     <div
@@ -1743,11 +1792,20 @@ export default function Portfolio() {
                         className="gap-1"
                       >
                         <a
-                          href="https://github.com/tanvirrifat1/baby-sitter-api" // Replace with actual repo link if different
+                          href="https://github.com/tanvirrifat1/Hot-Tube-Cinema-Client"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <Github className="h-4 w-4" />
+                        </a>
+                      </AnimatedButton>
+                      <AnimatedButton size="sm" className="gap-1 flex ">
+                        <a
+                          href="https://drive.google.com/drive/folders/1A_iBIut5VM_NoJ1rVrpqJ1SSTOpRMDXd"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="h-4 w-4" />
                         </a>
                       </AnimatedButton>
                     </div>
@@ -1804,7 +1862,7 @@ export default function Portfolio() {
                           Email
                         </p>
                         <p className="font-medium text-sm sm:text-base">
-                          john.doe@example.com
+                          rifatmiah373@gmail.com
                         </p>
                       </div>
                     </motion.div>
@@ -1829,7 +1887,7 @@ export default function Portfolio() {
                           href="#"
                           className="font-medium text-sm sm:text-base hover:text-primary"
                         >
-                          github.com/johndoe
+                          https://github.com/tanvirrifat1
                         </a>
                       </div>
                     </motion.div>
@@ -1854,7 +1912,7 @@ export default function Portfolio() {
                           href="#"
                           className="font-medium text-sm sm:text-base hover:text-primary"
                         >
-                          linkedin.com/in/johndoe
+                          https://www.linkedin.com/in/md-rifat-miah
                         </a>
                       </div>
                     </motion.div>
@@ -1900,7 +1958,7 @@ export default function Portfolio() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="grid gap-4">
+                  <form className="grid gap-4" onSubmit={handleSubmit}>
                     <motion.div
                       className="grid gap-2"
                       initial={{ opacity: 0, y: 20 }}
@@ -1916,10 +1974,13 @@ export default function Portfolio() {
                       </label>
                       <input
                         id="name"
-                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                         placeholder="Your name"
                       />
                     </motion.div>
+
                     <motion.div
                       className="grid gap-2"
                       initial={{ opacity: 0, y: 20 }}
@@ -1936,10 +1997,13 @@ export default function Portfolio() {
                       <input
                         id="email"
                         type="email"
-                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                         placeholder="Your email"
                       />
                     </motion.div>
+
                     <motion.div
                       className="grid gap-2"
                       initial={{ opacity: 0, y: 20 }}
@@ -1955,10 +2019,13 @@ export default function Portfolio() {
                       </label>
                       <input
                         id="subject"
-                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                         placeholder="Subject of your message"
                       />
                     </motion.div>
+
                     <motion.div
                       className="grid gap-2"
                       initial={{ opacity: 0, y: 20 }}
@@ -1974,17 +2041,24 @@ export default function Portfolio() {
                       </label>
                       <textarea
                         id="message"
-                        className="flex min-h-[120px] sm:min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="flex min-h-[120px] sm:min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                         placeholder="Your message"
                       />
                     </motion.div>
+
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                      <AnimatedButton size="lg" className="w-full mt-2">
+                      <AnimatedButton
+                        size="lg"
+                        className="w-full mt-2"
+                        type="submit"
+                      >
                         Send Message
                       </AnimatedButton>
                     </motion.div>
