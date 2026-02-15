@@ -2028,8 +2028,8 @@ export default function Portfolio() {
                       </div>
                       <p className='text-muted-foreground text-sm sm:text-base'>
                         I'm currently open to new opportunities and projects. My
-                        typical working hours are 9 AM to 6 PM (UTC+6), but I'm
-                        flexible for international clients.
+                        typical working hours are 9 AM to 6 PM regularly, but
+                        I'm flexible for international clients.
                       </p>
                     </div>
                   </CardContent>
