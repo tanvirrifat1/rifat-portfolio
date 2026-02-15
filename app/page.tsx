@@ -46,6 +46,7 @@ import { FaUbuntu } from "react-icons/fa6";
 import { SiHostinger } from "react-icons/si";
 import rifat from "../assets/rifatdb.jpeg";
 import holy from "../assets/holy.png";
+import skinSpired from "../assets/skin.webp";
 import hotTube from "../assets/hot-tube.png";
 import baby from "../assets/baby-sitter.png";
 import emailjs from "@emailjs/browser";
@@ -111,14 +112,14 @@ export default function Portfolio() {
   const MobileNav = () => (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="md:hidden" variant="outline" size="icon">
-          <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle menu</span>
+        <Button className='md:hidden' variant='outline' size='icon'>
+          <Menu className='h-6 w-6' />
+          <span className='sr-only'>Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[85%] sm:w-[385px] pt-12">
+      <SheetContent side='right' className='w-[85%] sm:w-[385px] pt-12'>
         <motion.nav
-          className="flex flex-col gap-4"
+          className='flex flex-col gap-4'
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
@@ -138,8 +139,8 @@ export default function Portfolio() {
                 scrollToSection(homeRef);
                 document.querySelector("[data-radix-collection-item]")?.click();
               }}
-              className="justify-start w-full"
-              size="lg"
+              className='justify-start w-full'
+              size='lg'
             >
               Home
             </Button>
@@ -155,8 +156,8 @@ export default function Portfolio() {
                 scrollToSection(skillsRef);
                 document.querySelector("[data-radix-collection-item]")?.click();
               }}
-              className="justify-start w-full"
-              size="lg"
+              className='justify-start w-full'
+              size='lg'
             >
               Skills
             </Button>
@@ -172,8 +173,8 @@ export default function Portfolio() {
                 scrollToSection(experienceRef);
                 document.querySelector("[data-radix-collection-item]")?.click();
               }}
-              className="justify-start w-full"
-              size="lg"
+              className='justify-start w-full'
+              size='lg'
             >
               Experience
             </Button>
@@ -189,8 +190,8 @@ export default function Portfolio() {
                 scrollToSection(projectsRef);
                 document.querySelector("[data-radix-collection-item]")?.click();
               }}
-              className="justify-start w-full"
-              size="lg"
+              className='justify-start w-full'
+              size='lg'
             >
               Projects
             </Button>
@@ -206,36 +207,36 @@ export default function Portfolio() {
                 scrollToSection(contactRef);
                 document.querySelector("[data-radix-collection-item]")?.click();
               }}
-              className="justify-start w-full"
-              size="lg"
+              className='justify-start w-full'
+              size='lg'
             >
               Contact
             </Button>
           </motion.div>
         </motion.nav>
         <motion.div
-          className="flex items-center gap-4 mt-8"
+          className='flex items-center gap-4 mt-8'
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            href='#'
+            className='text-muted-foreground hover:text-foreground transition-colors'
           >
-            <Github className="h-6 w-6" />
+            <Github className='h-6 w-6' />
           </a>
           <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            href='#'
+            className='text-muted-foreground hover:text-foreground transition-colors'
           >
-            <Linkedin className="h-6 w-6" />
+            <Linkedin className='h-6 w-6' />
           </a>
           <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            href='#'
+            className='text-muted-foreground hover:text-foreground transition-colors'
           >
-            <Mail className="h-6 w-6" />
+            <Mail className='h-6 w-6' />
           </a>
         </motion.div>
       </SheetContent>
@@ -250,7 +251,7 @@ export default function Portfolio() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
@@ -273,7 +274,7 @@ export default function Portfolio() {
           subject: formData.subject,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "" // ⬅️ Replace with actual Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "", // ⬅️ Replace with actual Public Key
       );
 
       console.log("Email sent successfully:", result.text);
@@ -300,7 +301,7 @@ export default function Portfolio() {
 
       {/* Navigation */}
       <motion.header
-        className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 border-b"
+        className='fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 border-b'
         style={{ opacity: headerOpacity }}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -311,19 +312,19 @@ export default function Portfolio() {
           damping: 20,
         }}
       >
-        <div className="container flex h-16 items-center justify-between">
+        <div className='container flex h-16 items-center justify-between'>
           <motion.div
-            className="flex items-center gap-2"
+            className='flex items-center gap-2'
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold">
+            <div className='h-8 w-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold'>
               RM
             </div>
-            <div className="font-bold text-xl">Rifat Miah</div>
+            <div className='font-bold text-xl'>Rifat Miah</div>
           </motion.div>
-          <nav className="hidden md:flex items-center gap-2 lg:gap-6">
+          <nav className='hidden md:flex items-center gap-2 lg:gap-6'>
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -332,7 +333,7 @@ export default function Portfolio() {
               <Button
                 variant={activeSection === "home" ? "default" : "ghost"}
                 onClick={() => scrollToSection(homeRef)}
-                className="transition-all duration-300"
+                className='transition-all duration-300'
                 size={isMobile ? "sm" : "default"}
               >
                 Home
@@ -346,7 +347,7 @@ export default function Portfolio() {
               <Button
                 variant={activeSection === "skills" ? "default" : "ghost"}
                 onClick={() => scrollToSection(skillsRef)}
-                className="transition-all duration-300"
+                className='transition-all duration-300'
                 size={isMobile ? "sm" : "default"}
               >
                 Skills
@@ -360,7 +361,7 @@ export default function Portfolio() {
               <Button
                 variant={activeSection === "experience" ? "default" : "ghost"}
                 onClick={() => scrollToSection(experienceRef)}
-                className="transition-all duration-300"
+                className='transition-all duration-300'
                 size={isMobile ? "sm" : "default"}
               >
                 Experience
@@ -374,7 +375,7 @@ export default function Portfolio() {
               <Button
                 variant={activeSection === "projects" ? "default" : "ghost"}
                 onClick={() => scrollToSection(projectsRef)}
-                className="transition-all duration-300"
+                className='transition-all duration-300'
                 size={isMobile ? "sm" : "default"}
               >
                 Projects
@@ -388,7 +389,7 @@ export default function Portfolio() {
               <Button
                 variant={activeSection === "contact" ? "default" : "ghost"}
                 onClick={() => scrollToSection(contactRef)}
-                className="transition-all duration-300"
+                className='transition-all duration-300'
                 size={isMobile ? "sm" : "default"}
               >
                 Contact
@@ -396,27 +397,27 @@ export default function Portfolio() {
             </motion.div>
           </nav>
           <motion.div
-            className="flex items-center gap-4"
+            className='flex items-center gap-4'
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="hidden sm:flex items-center gap-4">
+            <div className='hidden sm:flex items-center gap-4'>
               <a
-                href="https://github.com/tanvirrifat1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href='https://github.com/tanvirrifat1'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-muted-foreground hover:text-foreground transition-colors'
               >
-                <Github className="h-5 w-5" />
+                <Github className='h-5 w-5' />
               </a>
               <a
-                href="https://www.linkedin.com/in/md-rifat-miah"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href='https://www.linkedin.com/in/md-rifat-miah'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-muted-foreground hover:text-foreground transition-colors'
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className='h-5 w-5' />
               </a>
             </div>
             <ThemeToggle />
@@ -428,18 +429,18 @@ export default function Portfolio() {
       {/* Home Section */}
       <section
         ref={homeRef}
-        className="min-h-screen pt-24 flex items-center relative overflow-hidden"
+        className='min-h-screen pt-24 flex items-center relative overflow-hidden'
         style={{
           background:
             "radial-gradient(circle at 50% 50%, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--background-rgb), 0) 50%)",
         }}
       >
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -inset-[10px] opacity-30">
+        <div className='absolute inset-0 overflow-hidden'>
+          <div className='absolute -inset-[10px] opacity-30'>
             {Array.from({ length: 20 }).map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute rounded-full bg-primary/20"
+                className='absolute rounded-full bg-primary/20'
                 initial={{
                   opacity: 0,
                   scale: 0.5,
@@ -471,33 +472,33 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="container px-4 md:px-6 relative">
-          <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-8 order-2 lg:order-1">
-              <div className="space-y-4">
+        <div className='container px-4 md:px-6 relative'>
+          <div className='grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]'>
+            <div className='flex flex-col justify-center space-y-8 order-2 lg:order-1'>
+              <div className='space-y-4'>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary mb-2">
-                    <span className="relative flex h-2 w-2 mr-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                  <div className='inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary mb-2'>
+                    <span className='relative flex h-2 w-2 mr-2'>
+                      <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'></span>
+                      <span className='relative inline-flex rounded-full h-2 w-2 bg-primary'></span>
                     </span>
                     Available for new opportunities
                   </div>
                 </motion.div>
                 <TextReveal delay={0.3}>
-                  <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter md:text-5xl xl:text-6xl/none">
+                  <h1 className='text-3xl sm:text-4xl font-bold tracking-tighter md:text-5xl xl:text-6xl/none'>
                     Backend Developer{" "}
-                    <span className="text-primary block sm:inline">
+                    <span className='text-primary block sm:inline'>
                       with Full Stack Experience
                     </span>
                   </h1>
                 </TextReveal>
                 <motion.p
-                  className="max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl"
+                  className='max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl'
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
@@ -507,48 +508,48 @@ export default function Portfolio() {
                   solutions.
                 </motion.p>
                 <motion.div
-                  className="flex flex-wrap gap-2 pt-2"
+                  className='flex flex-wrap gap-2 pt-2'
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  <StaggerChildren className="flex flex-wrap gap-2">
+                  <StaggerChildren className='flex flex-wrap gap-2'>
                     <StaggerItem>
                       <Badge
-                        variant="outline"
-                        className="px-3 py-1 text-sm bg-background/80 backdrop-blur-sm"
+                        variant='outline'
+                        className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
                       >
                         Node.js
                       </Badge>
                     </StaggerItem>
                     <StaggerItem>
                       <Badge
-                        variant="outline"
-                        className="px-3 py-1 text-sm bg-background/80 backdrop-blur-sm"
+                        variant='outline'
+                        className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
                       >
                         Express
                       </Badge>
                     </StaggerItem>
                     <StaggerItem>
                       <Badge
-                        variant="outline"
-                        className="px-3 py-1 text-sm bg-background/80 backdrop-blur-sm"
+                        variant='outline'
+                        className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
                       >
                         MongoDB
                       </Badge>
                     </StaggerItem>
                     <StaggerItem>
                       <Badge
-                        variant="outline"
-                        className="px-3 py-1 text-sm bg-background/80 backdrop-blur-sm"
+                        variant='outline'
+                        className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
                       >
                         React
                       </Badge>
                     </StaggerItem>
                     <StaggerItem>
                       <Badge
-                        variant="outline"
-                        className="px-3 py-1 text-sm bg-background/80 backdrop-blur-sm"
+                        variant='outline'
+                        className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
                       >
                         TypeScript
                       </Badge>
@@ -557,54 +558,54 @@ export default function Portfolio() {
                 </motion.div>
               </div>
               <motion.div
-                className="flex flex-col sm:flex-row gap-3"
+                className='flex flex-col sm:flex-row gap-3'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <AnimatedButton
-                  size="lg"
-                  className="rounded-full px-8 transition-all duration-300 hover:shadow-lg"
+                  size='lg'
+                  className='rounded-full px-8 transition-all duration-300 hover:shadow-lg'
                   onClick={() => scrollToSection(contactRef)}
                 >
                   Contact Me
                 </AnimatedButton>
                 <a
-                  href="https://drive.google.com/file/d/1uq52G2sM-3WXS7IzOLcC7Kzxroi0Gdgf/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href='https://drive.google.com/file/d/1JEInfX7-6B7V_ODBeQxALXdj_ZFH0Kuw/view?usp=sharing'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <Button
-                    variant="outline"
-                    size="lg"
-                    className="rounded-full px-8 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md"
+                    variant='outline'
+                    size='lg'
+                    className='rounded-full px-8 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md'
                   >
                     View Resume
                   </Button>
                 </a>
               </motion.div>
               <motion.div
-                className="flex items-center gap-4 text-muted-foreground"
+                className='flex items-center gap-4 text-muted-foreground'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <div className="h-px flex-1 bg-border"></div>
-                <span className="text-xs sm:text-sm whitespace-nowrap">
-                  1+ year of professional experience
+                <div className='h-px flex-1 bg-border'></div>
+                <span className='text-xs sm:text-sm whitespace-nowrap'>
+                  1.6+ year of professional experience
                 </span>
-                <div className="h-px flex-1 bg-border"></div>
+                <div className='h-px flex-1 bg-border'></div>
               </motion.div>
             </div>
             <motion.div
-              className="flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0"
+              className='flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0'
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
             >
-              <div className="relative aspect-square w-full max-w-[300px] sm:max-w-[400px] lg:max-w-none overflow-hidden rounded-2xl border-2 border-primary/20 bg-muted/50 shadow-xl">
+              <div className='relative aspect-square w-full max-w-[300px] sm:max-w-[400px] lg:max-w-none overflow-hidden rounded-2xl border-2 border-primary/20 bg-muted/50 shadow-xl'>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 mix-blend-overlay"
+                  className='absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 mix-blend-overlay'
                   animate={{
                     background: [
                       "linear-gradient(to bottom right, rgba(var(--primary-rgb), 0.2), rgba(168, 85, 247, 0.2))",
@@ -623,24 +624,24 @@ export default function Portfolio() {
                 ></motion.div>
                 <Image
                   src={rifat}
-                  alt="Developer Portrait"
+                  alt='Developer Portrait'
                   width={600}
                   height={600}
-                  className="object-cover"
+                  className='object-cover'
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4 sm:p-6">
+                <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4 sm:p-6'>
                   <motion.div
-                    className="flex items-center gap-3"
+                    className='flex items-center gap-3'
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                   >
-                    <div className="h-10 w-10 rounded-full bg-background flex items-center justify-center shadow-lg">
-                      <Terminal className="h-5 w-5 text-primary" />
+                    <div className='h-10 w-10 rounded-full bg-background flex items-center justify-center shadow-lg'>
+                      <Terminal className='h-5 w-5 text-primary' />
                     </div>
                     <div>
-                      <div className="font-medium">Backend Developer</div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className='font-medium'>Backend Developer</div>
+                      <div className='text-sm text-muted-foreground'>
                         JVAI • Current
                       </div>
                     </div>
@@ -650,7 +651,7 @@ export default function Portfolio() {
             </motion.div>
           </div>
           <motion.div
-            className="absolute bottom-6 left-1/2 -translate-x-1/2"
+            className='absolute bottom-6 left-1/2 -translate-x-1/2'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}
@@ -664,13 +665,13 @@ export default function Portfolio() {
               }}
             >
               <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full border border-border/50 backdrop-blur-sm bg-background/50"
+                variant='ghost'
+                size='icon'
+                className='rounded-full border border-border/50 backdrop-blur-sm bg-background/50'
                 onClick={() => scrollToSection(skillsRef)}
               >
-                <ArrowDown className="h-5 w-5" />
-                <span className="sr-only">Scroll down</span>
+                <ArrowDown className='h-5 w-5' />
+                <span className='sr-only'>Scroll down</span>
               </Button>
             </motion.div>
           </motion.div>
@@ -678,47 +679,47 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section ref={skillsRef} className="py-16 sm:py-20 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none"></div>
-        <div className="container px-4 md:px-6 relative">
+      <section ref={skillsRef} className='py-16 sm:py-20 relative'>
+        <div className='absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none'></div>
+        <div className='container px-4 md:px-6 relative'>
           <FadeIn>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10">
-              <Badge variant="outline" className="px-3 py-1 text-sm">
+            <div className='flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10'>
+              <Badge variant='outline' className='px-3 py-1 text-sm'>
                 My Expertise
               </Badge>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+              <h2 className='text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl'>
                 Professional Skills
               </h2>
-              <p className="max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed">
+              <p className='max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed'>
                 A comprehensive overview of my technical expertise and
                 professional capabilities
               </p>
             </div>
           </FadeIn>
 
-          <Tabs defaultValue="technical" className="w-full max-w-5xl mx-auto">
-            <TabsList className="grid w-full grid-cols-2 mb-6 sm:mb-8">
-              <TabsTrigger value="technical">Technical Skills</TabsTrigger>
-              <TabsTrigger value="professional">
+          <Tabs defaultValue='technical' className='w-full max-w-5xl mx-auto'>
+            <TabsList className='grid w-full grid-cols-2 mb-6 sm:mb-8'>
+              <TabsTrigger value='technical'>Technical Skills</TabsTrigger>
+              <TabsTrigger value='professional'>
                 Professional Skills
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="technical" className="space-y-6 sm:space-y-8">
-              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+            <TabsContent value='technical' className='space-y-6 sm:space-y-8'>
+              <div className='grid gap-4 sm:gap-6 md:grid-cols-2'>
                 <FadeIn delay={0.1}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2">
-                        <Server className="h-5 w-5 text-primary" />
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
+                      <div className='flex items-center gap-2'>
+                        <Server className='h-5 w-5 text-primary' />
                         <CardTitle>Backend Development</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">Node.js</span>
+                    <CardContent className='space-y-4'>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>Node.js</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -733,13 +734,13 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>
                             Express.js
                           </span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -757,13 +758,13 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>
                             RESTful APIs
                           </span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -781,11 +782,11 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">Prisma</span>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>Prisma</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -808,19 +809,19 @@ export default function Portfolio() {
                 </FadeIn>
 
                 <FadeIn delay={0.2}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2">
-                        <Database className="h-5 w-5 text-primary" />
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
+                      <div className='flex items-center gap-2'>
+                        <Database className='h-5 w-5 text-primary' />
                         <CardTitle>Databases</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">MongoDB</span>
+                    <CardContent className='space-y-4'>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>MongoDB</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -835,13 +836,13 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>
                             PostgreSQL
                           </span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -859,11 +860,11 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">MySQL</span>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>MySQL</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -881,11 +882,11 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">Redis</span>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>Redis</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -908,19 +909,19 @@ export default function Portfolio() {
                 </FadeIn>
 
                 <FadeIn delay={0.3}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2">
-                        <Monitor className="h-5 w-5 text-primary" />
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
+                      <div className='flex items-center gap-2'>
+                        <Monitor className='h-5 w-5 text-primary' />
                         <CardTitle>Frontend Development</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">React</span>
+                    <CardContent className='space-y-4'>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>React</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -935,11 +936,11 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">HTML/CSS</span>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>HTML/CSS</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -957,13 +958,13 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>
                             Tailwind CSS
                           </span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -981,11 +982,11 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">Next.js</span>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>Next.js</span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -1008,21 +1009,21 @@ export default function Portfolio() {
                 </FadeIn>
 
                 <FadeIn delay={0.4}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2">
-                        <Code className="h-5 w-5 text-primary" />
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
+                      <div className='flex items-center gap-2'>
+                        <Code className='h-5 w-5 text-primary' />
                         <CardTitle>Programming Languages</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">
+                    <CardContent className='space-y-4'>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>
                             JavaScript
                           </span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -1037,13 +1038,13 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-sm font-medium">
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>
                             TypeScript
                           </span>
                         </div>
-                        <div className="flex gap-1">
+                        <div className='flex gap-1'>
                           {[...Array(5)].map((_, i) => (
                             <motion.div
                               key={i}
@@ -1061,35 +1062,81 @@ export default function Portfolio() {
                           ))}
                         </div>
                       </div>
+                      {/* c */}
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>C</span>
+                        </div>
+                        <div className='flex gap-1'>
+                          {[...Array(5)].map((_, i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ scaleX: 0 }}
+                              whileInView={{ scaleX: 1 }}
+                              viewport={{ once: true }}
+                              transition={{
+                                duration: 0.5,
+                                delay: 0.2 + i * 0.1,
+                              }}
+                              className={`h-2 flex-1 rounded-full origin-left ${
+                                i < 1 ? "bg-primary" : "bg-primary/30"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      {/* c++ */}
+                      <div className='space-y-2'>
+                        <div className='flex justify-between'>
+                          <span className='text-sm font-medium'>C++</span>
+                        </div>
+                        <div className='flex gap-1'>
+                          {[...Array(5)].map((_, i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ scaleX: 0 }}
+                              whileInView={{ scaleX: 1 }}
+                              viewport={{ once: true }}
+                              transition={{
+                                duration: 0.5,
+                                delay: 0.2 + i * 0.1,
+                              }}
+                              className={`h-2 flex-1 rounded-full origin-left ${
+                                i < 1 ? "bg-primary" : "bg-primary/30"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </FadeIn>
               </div>
 
-              <StaggerChildren className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 mt-6 sm:mt-8">
+              <StaggerChildren className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 mt-6 sm:mt-8'>
                 {[
                   {
-                    icon: <Layers className="h-6 w-6 sm:h-8 sm:w-8" />,
+                    icon: <Layers className='h-6 w-6 sm:h-8 sm:w-8' />,
                     name: "Docker",
                   },
                   {
-                    icon: <Cloud className="h-6 w-6 sm:h-8 sm:w-8" />,
+                    icon: <Cloud className='h-6 w-6 sm:h-8 sm:w-8' />,
                     name: "AWS",
                   },
                   {
-                    icon: <FaUbuntu className="h-6 w-6 sm:h-8 sm:w-8" />,
+                    icon: <FaUbuntu className='h-6 w-6 sm:h-8 sm:w-8' />,
                     name: "Ubuntu",
                   },
                   {
-                    icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8" />,
+                    icon: <Globe className='h-6 w-6 sm:h-8 sm:w-8' />,
                     name: "REST",
                   },
                   {
-                    icon: <SiHostinger className="h-6 w-6 sm:h-8 sm:w-8" />,
+                    icon: <SiHostinger className='h-6 w-6 sm:h-8 sm:w-8' />,
                     name: "Hostinger",
                   },
                   {
-                    icon: <Terminal className="h-6 w-6 sm:h-8 sm:w-8" />,
+                    icon: <Terminal className='h-6 w-6 sm:h-8 sm:w-8' />,
                     name: "Git",
                   },
                 ].map((tech, i) => (
@@ -1099,12 +1146,12 @@ export default function Portfolio() {
                         y: -5,
                         boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                       }}
-                      className="flex flex-col items-center justify-center p-3 sm:p-4 border-none shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-br from-background to-muted/50 rounded-lg h-full"
+                      className='flex flex-col items-center justify-center p-3 sm:p-4 border-none shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-br from-background to-muted/50 rounded-lg h-full'
                     >
-                      <div className="text-primary mb-1 sm:mb-2">
+                      <div className='text-primary mb-1 sm:mb-2'>
                         {tech.icon}
                       </div>
-                      <div className="text-xs sm:text-sm font-medium">
+                      <div className='text-xs sm:text-sm font-medium'>
                         {tech.name}
                       </div>
                     </motion.div>
@@ -1114,22 +1161,29 @@ export default function Portfolio() {
             </TabsContent>
 
             <TabsContent
-              value="professional"
-              className="space-y-6 sm:space-y-8"
+              value='professional'
+              className='space-y-6 sm:space-y-8'
             >
-              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+              <div className='grid gap-4 sm:gap-6 md:grid-cols-2'>
                 <FadeIn delay={0.1}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
                       <CardTitle>Problem Solving</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground text-sm sm:text-base mb-4">
-                        Analytical approach to complex technical challenges,
-                        breaking down problems into manageable components and
-                        implementing efficient solutions.
+                      <p className='text-muted-foreground text-sm sm:text-base mb-4'>
+                        When I encounter any complex issue, such as query
+                        optimization or advanced technical topics, I first
+                        analyze the problem within my project context and study
+                        it thoroughly. I research solutions using resources like
+                        Google and ChatGPT to ensure I understand the concept
+                        and implement the correct solution. Recently, I also
+                        started practicing problem-solving using C and C++, and
+                        I actively solve coding challenges on platforms like
+                        HackerRank and Codeforces to strengthen my algorithmic
+                        and logical thinking skills.
                       </p>
-                      <div className="flex gap-1">
+                      <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1143,11 +1197,11 @@ export default function Portfolio() {
                           />
                         ))}
                       </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-muted-foreground">
+                      <div className='flex justify-between mt-1'>
+                        <span className='text-xs text-muted-foreground'>
                           Beginner
                         </span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
                       </div>
@@ -1156,17 +1210,27 @@ export default function Portfolio() {
                 </FadeIn>
 
                 <FadeIn delay={0.2}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
                       <CardTitle>Team Collaboration</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground text-sm sm:text-base mb-4">
-                        Effective communication and collaboration with
-                        cross-functional teams, sharing knowledge and
-                        contributing to a positive work environment.
+                      <p className='text-muted-foreground text-sm sm:text-base mb-4'>
+                        As a Backend Developer and Team Leader, I actively
+                        collaborate with my team by distributing
+                        responsibilities based on individual expertise,
+                        including Figma design, frontend, backend, and AI
+                        development. Before starting any project, we conduct
+                        thorough research and analysis to understand the project
+                        scope, complexity, and estimated timeline, followed by
+                        proper planning. This structured approach ensures smooth
+                        project execution. Whenever challenges arise, the team
+                        collaborates closely to identify and resolve issues
+                        promptly. Additionally, we regularly hold meetings to
+                        evaluate our progress and continuously improve both our
+                        team performance and technical skills.
                       </p>
-                      <div className="flex gap-1">
+                      <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1180,11 +1244,11 @@ export default function Portfolio() {
                           />
                         ))}
                       </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-muted-foreground">
+                      <div className='flex justify-between mt-1'>
+                        <span className='text-xs text-muted-foreground'>
                           Beginner
                         </span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
                       </div>
@@ -1193,17 +1257,27 @@ export default function Portfolio() {
                 </FadeIn>
 
                 <FadeIn delay={0.3}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
                       <CardTitle>Project Management</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground text-sm sm:text-base mb-4">
-                        Experience in managing project timelines, prioritizing
-                        tasks, and delivering high-quality results within
-                        deadlines.
+                      <p className='text-muted-foreground text-sm sm:text-base mb-4'>
+                        Our project management process begins with proper
+                        planning, where we analyze the project requirements,
+                        complexity, and define a clear timeframe before
+                        assigning tasks to team members. Once planning is
+                        complete, we create a dedicated communication group
+                        where each team member provides daily updates on their
+                        progress. If anyone encounters an issue, we immediately
+                        collaborate as a team to resolve it efficiently. We also
+                        ensure transparent communication by sharing daily
+                        progress updates with the client. After successfully
+                        completing all project requirements and ensuring client
+                        satisfaction, we proceed with the final handover of the
+                        project.
                       </p>
-                      <div className="flex gap-1">
+                      <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1217,11 +1291,11 @@ export default function Portfolio() {
                           />
                         ))}
                       </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-muted-foreground">
+                      <div className='flex justify-between mt-1'>
+                        <span className='text-xs text-muted-foreground'>
                           Beginner
                         </span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
                       </div>
@@ -1230,17 +1304,26 @@ export default function Portfolio() {
                 </FadeIn>
 
                 <FadeIn delay={0.4}>
-                  <Card className="overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardHeader className="pb-2">
+                  <Card className='overflow-hidden border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardHeader className='pb-2'>
                       <CardTitle>Continuous Learning</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground text-sm sm:text-base mb-4">
-                        Commitment to staying updated with the latest
-                        technologies and best practices through self-learning
-                        and professional development.
+                      <p className='text-muted-foreground text-sm sm:text-base mb-4'>
+                        I am committed to continuous learning and regularly
+                        challenge myself with complex problems to improve my
+                        problem-solving skills. Recently, I began learning C and
+                        C++ for deeper understanding of programming fundamentals
+                        and problem solving, and I am now progressing toward
+                        Python and Django to expand my backend development
+                        expertise. As a software developer, I am passionate
+                        about learning new technologies and adapting to emerging
+                        trends. I stay prepared to learn and adopt new
+                        languages, frameworks, or AI technologies in the future
+                        to remain effective and relevant in this fast-evolving
+                        industry.
                       </p>
-                      <div className="flex gap-1">
+                      <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1254,11 +1337,11 @@ export default function Portfolio() {
                           />
                         ))}
                       </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-muted-foreground">
+                      <div className='flex justify-between mt-1'>
+                        <span className='text-xs text-muted-foreground'>
                           Beginner
                         </span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
                       </div>
@@ -1272,27 +1355,27 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section ref={experienceRef} className="py-16 sm:py-20 bg-muted/30">
-        <div className="container px-4 md:px-6">
+      <section ref={experienceRef} className='py-16 sm:py-20 bg-muted/30'>
+        <div className='container px-4 md:px-6'>
           <FadeIn>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10">
-              <Badge variant="outline" className="px-3 py-1 text-sm">
+            <div className='flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10'>
+              <Badge variant='outline' className='px-3 py-1 text-sm'>
                 Career Path
               </Badge>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+              <h2 className='text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl'>
                 Professional Experience
               </h2>
-              <p className="max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed">
+              <p className='max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed'>
                 My journey as a developer and the valuable experience I've
                 gained along the way
               </p>
             </div>
           </FadeIn>
 
-          <div className="relative max-w-5xl mx-auto">
+          <div className='relative max-w-5xl mx-auto'>
             {/* Timeline line */}
             <motion.div
-              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border -ml-px md:ml-0"
+              className='absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border -ml-px md:ml-0'
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               viewport={{ once: true }}
@@ -1300,23 +1383,23 @@ export default function Portfolio() {
             ></motion.div>
 
             {/* Experience items */}
-            <div className="space-y-8 sm:space-y-12">
+            <div className='space-y-8 sm:space-y-12'>
               {/* Current job */}
-              <div className="relative flex flex-col md:flex-row items-start">
+              <div className='relative flex flex-col md:flex-row items-start'>
                 <FadeIn
-                  direction="right"
-                  className="flex flex-1 flex-col md:items-end md:pr-10 md:text-right order-2 md:order-1 pl-12 md:pl-0"
+                  direction='right'
+                  className='flex flex-1 flex-col md:items-end md:pr-10 md:text-right order-2 md:order-1 pl-12 md:pl-0'
                 >
-                  <div className="mb-2 md:mb-0">
-                    <Badge className="mb-1">Current</Badge>
-                    <h3 className="text-xl font-bold">Backend Developer</h3>
-                    <p className="text-primary font-medium">JVAI</p>
-                    <p className="text-sm text-muted-foreground">7 months</p>
+                  <div className='mb-2 md:mb-0'>
+                    <Badge className='mb-1'>Current</Badge>
+                    <h3 className='text-xl font-bold'>Backend Developer</h3>
+                    <p className='text-primary font-medium'>JVAI</p>
+                    <p className='text-sm text-muted-foreground'>1.4 years</p>
                   </div>
                 </FadeIn>
 
                 <motion.div
-                  className="absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center"
+                  className='absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center'
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
@@ -1327,23 +1410,23 @@ export default function Portfolio() {
                     delay: 0.3,
                   }}
                 >
-                  <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-4 border-background bg-primary flex items-center justify-center text-primary-foreground">
-                    <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full border-4 border-background bg-primary flex items-center justify-center text-primary-foreground'>
+                    <Briefcase className='h-3 w-3 sm:h-4 sm:w-4' />
                   </div>
                 </motion.div>
 
                 <FadeIn
-                  direction="left"
-                  className="flex-1 md:ml-10 order-1 md:order-2 border-none shadow-md bg-gradient-to-br from-background to-muted/80 ml-12 md:ml-10"
+                  direction='left'
+                  className='flex-1 md:ml-10 order-1 md:order-2 border-none shadow-md bg-gradient-to-br from-background to-muted/80 ml-12 md:ml-10'
                 >
-                  <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardContent className="p-4 sm:p-6">
+                  <Card className='border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardContent className='p-4 sm:p-6'>
                       <StaggerChildren>
-                        <ul className="space-y-2 ">
+                        <ul className='space-y-2 '>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Working as a backend developer on multiple
                                 projects, including CRM platforms, social media
                                 applications, and money exchange systems
@@ -1351,9 +1434,9 @@ export default function Portfolio() {
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Regularly meeting with clients to gather
                                 requirements, provide technical guidance, and
                                 ensure project alignment with business goals
@@ -1361,9 +1444,9 @@ export default function Portfolio() {
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Collaborating closely with frontend developers,
                                 designers, and QA teams to deliver scalable and
                                 maintainable solutions
@@ -1371,9 +1454,9 @@ export default function Portfolio() {
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Writing clean, well-documented, and
                                 production-ready code while following best
                                 practices in architecture and security
@@ -1381,9 +1464,9 @@ export default function Portfolio() {
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Continuously learning and adapting to new
                                 technologies, tools, and development
                                 methodologies to improve project outcomes
@@ -1393,22 +1476,22 @@ export default function Portfolio() {
                         </ul>
                       </StaggerChildren>
                       <motion.div
-                        className="flex flex-wrap gap-2 mt-4"
+                        className='flex flex-wrap gap-2 mt-4'
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Badge variant="secondary">Node.js</Badge>
-                        <Badge variant="secondary">Express</Badge>
-                        <Badge variant="secondary">MongoDB</Badge>
-                        <Badge variant="secondary">RESTful APIs</Badge>
-                        <Badge variant="secondary">Stripe</Badge>
-                        <Badge variant="secondary">Socket.oi</Badge>
-                        <Badge variant="secondary">Ubuntu</Badge>
-                        <Badge variant="secondary">Docker</Badge>
-                        <Badge variant="secondary">AWS S3</Badge>
-                        <Badge variant="secondary">Typescript</Badge>
+                        <Badge variant='secondary'>Node.js</Badge>
+                        <Badge variant='secondary'>Express</Badge>
+                        <Badge variant='secondary'>MongoDB</Badge>
+                        <Badge variant='secondary'>RESTful APIs</Badge>
+                        <Badge variant='secondary'>Stripe</Badge>
+                        <Badge variant='secondary'>Socket.oi</Badge>
+                        <Badge variant='secondary'>Ubuntu</Badge>
+                        <Badge variant='secondary'>Docker</Badge>
+                        <Badge variant='secondary'>AWS S3</Badge>
+                        <Badge variant='secondary'>Typescript</Badge>
                       </motion.div>
                     </CardContent>
                   </Card>
@@ -1416,37 +1499,37 @@ export default function Portfolio() {
               </div>
 
               {/* Previous job */}
-              <div className="relative flex flex-col md:flex-row items-start">
+              <div className='relative flex flex-col md:flex-row items-start'>
                 <FadeIn
-                  direction="left"
-                  className="flex-1 md:mr-10 md:text-right order-1 border-none shadow-md bg-gradient-to-br from-background to-muted/80 ml-12 md:ml-0"
+                  direction='left'
+                  className='flex-1 md:mr-10 md:text-right order-1 border-none shadow-md bg-gradient-to-br from-background to-muted/80 ml-12 md:ml-0'
                 >
-                  <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardContent className="p-4 sm:p-6">
+                  <Card className='border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardContent className='p-4 sm:p-6'>
                       <StaggerChildren>
-                        <ul className="space-y-2 md:ml-auto">
+                        <ul className='space-y-2 md:ml-auto'>
                           <StaggerItem>
-                            <li className="flex items-start gap-2 md:flex-row-reverse">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 md:rotate-180" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2 md:flex-row-reverse'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5 md:rotate-180' />
+                              <span className='text-sm sm:text-base'>
                                 Developed both frontend and backend components
                                 for web applications
                               </span>
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2 md:flex-row-reverse">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 md:rotate-180" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2 md:flex-row-reverse'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5 md:rotate-180' />
+                              <span className='text-sm sm:text-base'>
                                 Implemented responsive UI designs using modern
                                 frontend frameworks
                               </span>
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2 md:flex-row-reverse">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 md:rotate-180" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2 md:flex-row-reverse'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5 md:rotate-180' />
+                              <span className='text-sm sm:text-base'>
                                 Participated in the full software development
                                 lifecycle
                               </span>
@@ -1455,24 +1538,24 @@ export default function Portfolio() {
                         </ul>
                       </StaggerChildren>
                       <motion.div
-                        className="flex flex-wrap gap-2 mt-4 md:justify-end"
+                        className='flex flex-wrap gap-2 mt-4 md:justify-end'
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Badge variant="secondary">Next.js</Badge>
-                        <Badge variant="secondary">Prisma</Badge>
-                        <Badge variant="secondary">MySQL</Badge>
-                        <Badge variant="secondary">TypeScript</Badge>
-                        <Badge variant="secondary">Tailwind</Badge>
+                        <Badge variant='secondary'>Next.js</Badge>
+                        <Badge variant='secondary'>Prisma</Badge>
+                        <Badge variant='secondary'>MySQL</Badge>
+                        <Badge variant='secondary'>TypeScript</Badge>
+                        <Badge variant='secondary'>Tailwind</Badge>
                       </motion.div>
                     </CardContent>
                   </Card>
                 </FadeIn>
 
                 <motion.div
-                  className="absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center"
+                  className='absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center'
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
@@ -1483,21 +1566,21 @@ export default function Portfolio() {
                     delay: 0.3,
                   }}
                 >
-                  <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-4 border-background bg-primary/80 flex items-center justify-center text-primary-foreground">
-                    <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full border-4 border-background bg-primary/80 flex items-center justify-center text-primary-foreground'>
+                    <Briefcase className='h-3 w-3 sm:h-4 sm:w-4' />
                   </div>
                 </motion.div>
 
                 <FadeIn
-                  direction="right"
-                  className="flex flex-1 flex-col md:items-start md:pl-10 order-2 pl-12 md:pl-10"
+                  direction='right'
+                  className='flex flex-1 flex-col md:items-start md:pl-10 order-2 pl-12 md:pl-10'
                 >
-                  <div className="mb-2 md:mb-0">
-                    <h3 className="text-xl font-bold">Full Stack Developer</h3>
-                    <p className="text-primary font-medium">
+                  <div className='mb-2 md:mb-0'>
+                    <h3 className='text-xl font-bold'>Full Stack Developer</h3>
+                    <p className='text-primary font-medium'>
                       Dot BD Solutions Limited
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className='text-sm text-muted-foreground'>
                       3 months (Onsite)
                     </p>
                   </div>
@@ -1505,24 +1588,24 @@ export default function Portfolio() {
               </div>
 
               {/* First job */}
-              <div className="relative flex flex-col md:flex-row items-start">
+              <div className='relative flex flex-col md:flex-row items-start'>
                 <FadeIn
-                  direction="right"
-                  className="flex flex-1 flex-col md:items-end md:pr-10 md:text-right order-2 md:order-1 pl-12 md:pl-0"
+                  direction='right'
+                  className='flex flex-1 flex-col md:items-end md:pr-10 md:text-right order-2 md:order-1 pl-12 md:pl-0'
                 >
-                  <div className="mb-2 md:mb-0">
-                    <h3 className="text-xl font-bold">
+                  <div className='mb-2 md:mb-0'>
+                    <h3 className='text-xl font-bold'>
                       Frontend Developer Intern
                     </h3>
-                    <p className="text-primary font-medium">Vlaunchu</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className='text-primary font-medium'>Vlaunchu</p>
+                    <p className='text-sm text-muted-foreground'>
                       3 months (Remote)
                     </p>
                   </div>
                 </FadeIn>
 
                 <motion.div
-                  className="absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center"
+                  className='absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center'
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
@@ -1533,41 +1616,41 @@ export default function Portfolio() {
                     delay: 0.3,
                   }}
                 >
-                  <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-4 border-background bg-primary/60 flex items-center justify-center text-primary-foreground">
-                    <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full border-4 border-background bg-primary/60 flex items-center justify-center text-primary-foreground'>
+                    <Briefcase className='h-3 w-3 sm:h-4 sm:w-4' />
                   </div>
                 </motion.div>
 
                 <FadeIn
-                  direction="left"
-                  className="flex-1 md:ml-10 order-1 md:order-2 border-none shadow-md bg-gradient-to-br from-background to-muted/80 ml-12 md:ml-10"
+                  direction='left'
+                  className='flex-1 md:ml-10 order-1 md:order-2 border-none shadow-md bg-gradient-to-br from-background to-muted/80 ml-12 md:ml-10'
                 >
-                  <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
-                    <CardContent className="p-4 sm:p-6">
+                  <Card className='border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
+                    <CardContent className='p-4 sm:p-6'>
                       <StaggerChildren>
-                        <ul className="space-y-2">
+                        <ul className='space-y-2'>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Created responsive user interfaces using modern
                                 frontend technologies
                               </span>
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Implemented designs and wireframes into
                                 functional web pages
                               </span>
                             </li>
                           </StaggerItem>
                           <StaggerItem>
-                            <li className="flex items-start gap-2">
-                              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm sm:text-base">
+                            <li className='flex items-start gap-2'>
+                              <ChevronRight className='h-5 w-5 text-primary flex-shrink-0 mt-0.5' />
+                              <span className='text-sm sm:text-base'>
                                 Collaborated remotely with the development team
                               </span>
                             </li>
@@ -1575,16 +1658,16 @@ export default function Portfolio() {
                         </ul>
                       </StaggerChildren>
                       <motion.div
-                        className="flex flex-wrap gap-2 mt-4"
+                        className='flex flex-wrap gap-2 mt-4'
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Badge variant="secondary">React</Badge>
-                        <Badge variant="secondary">JavaScript</Badge>
-                        <Badge variant="secondary">MongoDB</Badge>
-                        <Badge variant="secondary">Tailwind</Badge>
+                        <Badge variant='secondary'>React</Badge>
+                        <Badge variant='secondary'>JavaScript</Badge>
+                        <Badge variant='secondary'>MongoDB</Badge>
+                        <Badge variant='secondary'>Tailwind</Badge>
                       </motion.div>
                     </CardContent>
                   </Card>
@@ -1596,23 +1679,23 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section ref={projectsRef} className="py-16 sm:py-20">
-        <div className="container px-4 md:px-6">
+      <section ref={projectsRef} className='py-16 sm:py-20'>
+        <div className='container px-4 md:px-6'>
           <FadeIn>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10">
-              <Badge variant="outline" className="px-3 py-1 text-sm">
+            <div className='flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10'>
+              <Badge variant='outline' className='px-3 py-1 text-sm'>
                 Portfolio
               </Badge>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+              <h2 className='text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl'>
                 Featured Projects
               </h2>
-              <p className="max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed">
+              <p className='max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed'>
                 Showcasing my best work and technical capabilities
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          <div className='grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto'>
             {/* Project 1 */}
 
             <FadeIn delay={0.2}>
@@ -1620,59 +1703,66 @@ export default function Portfolio() {
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                  <div className="relative aspect-video overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+                <Card className='group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full'>
+                  <div className='relative aspect-video overflow-hidden'>
+                    <div className='absolute inset-0 bg-gradient-to-t from-background to-transparent z-10'></div>
                     <Image
-                      src={holy}
-                      alt="Project 2"
+                      src={skinSpired}
+                      alt='Project 2'
                       width={100}
                       height={100}
-                      className="object-cover w-full h-full"
+                      className='object-cover w-full h-full'
                     />
                   </div>
-                  <CardContent className="p-4 sm:p-6">
-                    <Badge className="mb-2">Full Stack</Badge>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">
-                      Holy Bot AI
+                  <CardContent className='p-4 sm:p-6'>
+                    <Badge className='mb-2'>Backend</Badge>
+                    <h3 className='text-lg sm:text-xl font-bold mb-2'>
+                      SkinSpired
                     </h3>
-                    <p className="text-muted-foreground text-sm sm:text-base mb-4">
-                      A production-ready AI chat platform offering users
-                      intelligent interactions through GPT-based agents. Holy
-                      Bot AI includes Stripe-powered subscription plans,
-                      authentication, and a sleek UI tailored for scalability
-                      and user growth.
+                    <p className='text-muted-foreground text-sm sm:text-base mb-4'>
+                      SkinSpired is a live mobile skincare application that
+                      helps users identify their skin conditions, follow
+                      recommended treatments, and track their skin improvement
+                      over time. Users can sign up, set up their profiles, and
+                      select their specific skin condition from a comprehensive
+                      list. The app allows users to take daily photos to monitor
+                      progress, compare results, and view improvement through
+                      visual graphs. Additionally, SkinSpired provides scheduled
+                      reminders and notifications to help users maintain
+                      consistent skincare routines. The platform is fully
+                      user-friendly and completely free, offering an effective
+                      and accessible solution for personalized skin health
+                      management.
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge variant="outline">Next.js</Badge>
-                      <Badge variant="outline">Stripe</Badge>
-                      <Badge variant="outline">Node.js</Badge>
-                      <Badge variant="outline">MongoDB</Badge>
-                      <Badge variant="outline">TypeScript</Badge>
-                      <Badge variant="outline">Tailwind CSS</Badge>
-                      <Badge variant="outline">OpenAI API</Badge>
+                    <div className='flex flex-wrap gap-2 mb-4'>
+                      <Badge variant='outline'>Flutter</Badge>
+                      <Badge variant='outline'>Socket.IO</Badge>
+                      <Badge variant='outline'>Node.js</Badge>
+                      <Badge variant='outline'>Express</Badge>
+                      <Badge variant='outline'>MongoDB</Badge>
+                      <Badge variant='outline'>TypeScript</Badge>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className='flex justify-between items-center'>
                       <AnimatedButton
-                        variant="outline"
-                        size="sm"
-                        className="gap-1"
+                        variant='outline'
+                        size='sm'
+                        className='gap-1'
                       >
                         <a
-                          href="https://github.com/tanvirrifat1/holy-bot-AI"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href='https://github.com/Alpha-Bytes-Department/skin-spired-server'
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <Github className="h-4 w-4" />
+                          <Github className='h-4 w-4' />
                         </a>
                       </AnimatedButton>
-                      <AnimatedButton size="sm" className="gap-1">
+                      <AnimatedButton size='sm' className='gap-1'>
                         <a
-                          href="https://holybot.ai/"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href='https://play.google.com/store/apps/details?id=com.lauren.personal_wellness&pli=1'
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <ExternalLink className="h-4 w-4" />
+                          <ExternalLink className='h-4 w-4' />
                         </a>
                       </AnimatedButton>
                     </div>
@@ -1688,56 +1778,56 @@ export default function Portfolio() {
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                  <div className="relative aspect-video overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+                <Card className='group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full'>
+                  <div className='relative aspect-video overflow-hidden'>
+                    <div className='absolute inset-0 bg-gradient-to-t from-background to-transparent z-10'></div>
                     <Image
                       src={hotTube}
-                      alt="Project 2"
+                      alt='Project 2'
                       width={100}
                       height={100}
-                      className="object-cover w-full h-full"
+                      className='object-cover w-full h-full'
                     />
                   </div>
-                  <CardContent className="p-4 sm:p-6">
-                    <Badge className="mb-2">Full Stack</Badge>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">
+                  <CardContent className='p-4 sm:p-6'>
+                    <Badge className='mb-2'>Full Stack</Badge>
+                    <h3 className='text-lg sm:text-xl font-bold mb-2'>
                       Hot-Tube-Cinema
                     </h3>
-                    <p className="text-muted-foreground text-sm sm:text-base mb-4">
+                    <p className='text-muted-foreground text-sm sm:text-base mb-4'>
                       Hot-Tube-Cinema is a robust and scalable RESTful API built
                       for a modern movie streaming platform. It features secure
                       authentication, efficient content management, and
                       streamlined user interaction capabilities—designed to
                       power dynamic, media-rich entertainment experiences.
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge variant="outline">React</Badge>
-                      <Badge variant="outline">Node.js</Badge>
-                      <Badge variant="outline">Express</Badge>
-                      <Badge variant="outline">MongoDB</Badge>
+                    <div className='flex flex-wrap gap-2 mb-4'>
+                      <Badge variant='outline'>React</Badge>
+                      <Badge variant='outline'>Node.js</Badge>
+                      <Badge variant='outline'>Express</Badge>
+                      <Badge variant='outline'>MongoDB</Badge>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className='flex justify-between items-center'>
                       <AnimatedButton
-                        variant="outline"
-                        size="sm"
-                        className="gap-1"
+                        variant='outline'
+                        size='sm'
+                        className='gap-1'
                       >
                         <a
-                          href="https://github.com/tanvirrifat1/Hot-Tube-Cinema-Client"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href='https://github.com/tanvirrifat1/Hot-Tube-Cinema-Client'
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <Github className="h-4 w-4" />
+                          <Github className='h-4 w-4' />
                         </a>
                       </AnimatedButton>
-                      <AnimatedButton size="sm" className="gap-1 flex ">
+                      <AnimatedButton size='sm' className='gap-1 flex '>
                         <a
-                          href="https://hot-tube-server747.netlify.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href='https://hot-tube-server747.netlify.app/'
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <ExternalLink className="h-4 w-4" />
+                          <ExternalLink className='h-4 w-4' />
                         </a>
                       </AnimatedButton>
                     </div>
@@ -1746,28 +1836,28 @@ export default function Portfolio() {
               </motion.div>
             </FadeIn>
             {/* Project 3 */}
-            <FadeIn delay={0.3} className="md:col-span-2 lg:col-span-1">
+            <FadeIn delay={0.3} className='md:col-span-2 lg:col-span-1'>
               <motion.div
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                  <div className="relative aspect-video overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+                <Card className='group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full'>
+                  <div className='relative aspect-video overflow-hidden'>
+                    <div className='absolute inset-0 bg-gradient-to-t from-background to-transparent z-10'></div>
                     <Image
                       src={baby}
-                      alt="Project 2"
+                      alt='Project 2'
                       width={100}
                       height={100}
-                      className="object-cover w-full h-full"
+                      className='object-cover w-full h-full'
                     />
                   </div>
-                  <CardContent className="p-4 sm:p-6">
-                    <Badge className="mb-2">Backend</Badge>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">
+                  <CardContent className='p-4 sm:p-6'>
+                    <Badge className='mb-2'>Backend</Badge>
+                    <h3 className='text-lg sm:text-xl font-bold mb-2'>
                       Baby-Sitter App (API)
                     </h3>
-                    <p className="text-muted-foreground text-sm sm:text-base mb-4">
+                    <p className='text-muted-foreground text-sm sm:text-base mb-4'>
                       A backend service for a real-time baby-sitting platform
                       connecting parents and baby sitters. Parents can monitor
                       their child 24/7 through live updates, video requests, nap
@@ -1776,34 +1866,34 @@ export default function Portfolio() {
                       sitter-parent communication using a scalable RESTful API
                       architecture.
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge variant="outline">Node.js</Badge>
-                      <Badge variant="outline">Express</Badge>
-                      <Badge variant="outline">MongoDB</Badge>
-                      <Badge variant="outline">Socket.io</Badge>
-                      <Badge variant="outline">ASW S3</Badge>
+                    <div className='flex flex-wrap gap-2 mb-4'>
+                      <Badge variant='outline'>Node.js</Badge>
+                      <Badge variant='outline'>Express</Badge>
+                      <Badge variant='outline'>MongoDB</Badge>
+                      <Badge variant='outline'>Socket.io</Badge>
+                      <Badge variant='outline'>ASW S3</Badge>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className='flex justify-between items-center'>
                       <AnimatedButton
-                        variant="outline"
-                        size="sm"
-                        className="gap-1"
+                        variant='outline'
+                        size='sm'
+                        className='gap-1'
                       >
                         <a
-                          href="https://github.com/tanvirrifat1/Hot-Tube-Cinema-Client"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href='https://github.com/tanvirrifat1/Baby-Watcher-Backend'
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <Github className="h-4 w-4" />
+                          <Github className='h-4 w-4' />
                         </a>
                       </AnimatedButton>
-                      <AnimatedButton size="sm" className="gap-1 flex ">
+                      <AnimatedButton size='sm' className='gap-1 flex '>
                         <a
-                          href="https://drive.google.com/drive/folders/1A_iBIut5VM_NoJ1rVrpqJ1SSTOpRMDXd"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href='https://drive.google.com/drive/folders/1A_iBIut5VM_NoJ1rVrpqJ1SSTOpRMDXd'
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <ExternalLink className="h-4 w-4" />
+                          <ExternalLink className='h-4 w-4' />
                         </a>
                       </AnimatedButton>
                     </div>
@@ -1816,35 +1906,35 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section ref={contactRef} className="py-16 sm:py-20 bg-muted/30">
-        <div className="container px-4 md:px-6">
+      <section ref={contactRef} className='py-16 sm:py-20 bg-muted/30'>
+        <div className='container px-4 md:px-6'>
           <FadeIn>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10">
-              <Badge variant="outline" className="px-3 py-1 text-sm">
+            <div className='flex flex-col items-center justify-center space-y-4 text-center mb-8 sm:mb-10'>
+              <Badge variant='outline' className='px-3 py-1 text-sm'>
                 Get In Touch
               </Badge>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+              <h2 className='text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl'>
                 Contact Me
               </h2>
-              <p className="max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed">
+              <p className='max-w-[700px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed'>
                 Let's discuss how I can contribute to your next project
               </p>
             </div>
           </FadeIn>
 
-          <div className="mx-auto grid max-w-6xl gap-6 sm:gap-8 lg:grid-cols-2">
-            <div className="space-y-4 sm:space-y-6">
-              <FadeIn direction="up" delay={0.1}>
-                <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
+          <div className='mx-auto grid max-w-6xl gap-6 sm:gap-8 lg:grid-cols-2'>
+            <div className='space-y-4 sm:space-y-6'>
+              <FadeIn direction='up' delay={0.1}>
+                <Card className='border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
                   <CardHeader>
                     <CardTitle>Contact Information</CardTitle>
                     <CardDescription>
                       Feel free to reach out through any of these channels
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className='space-y-4'>
                     <motion.div
-                      className="flex items-center gap-4 p-3 sm:p-4 rounded-lg bg-muted/50"
+                      className='flex items-center gap-4 p-3 sm:p-4 rounded-lg bg-muted/50'
                       whileHover={{ x: 5 }}
                       transition={{
                         type: "spring",
@@ -1852,21 +1942,21 @@ export default function Portfolio() {
                         damping: 10,
                       }}
                     >
-                      <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
+                      <div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary'>
+                        <Mail className='h-4 w-4 sm:h-5 sm:w-5' />
                       </div>
                       <div>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className='text-xs sm:text-sm text-muted-foreground'>
                           Email
                         </p>
-                        <p className="font-medium text-sm sm:text-base">
+                        <p className='font-medium text-sm sm:text-base'>
                           rifatmiah373@gmail.com
                         </p>
                       </div>
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center gap-4 p-3 sm:p-4 rounded-lg bg-muted/50"
+                      className='flex items-center gap-4 p-3 sm:p-4 rounded-lg bg-muted/50'
                       whileHover={{ x: 5 }}
                       transition={{
                         type: "spring",
@@ -1874,16 +1964,16 @@ export default function Portfolio() {
                         damping: 10,
                       }}
                     >
-                      <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <Github className="h-4 w-4 sm:h-5 sm:w-5" />
+                      <div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary'>
+                        <Github className='h-4 w-4 sm:h-5 sm:w-5' />
                       </div>
                       <div>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className='text-xs sm:text-sm text-muted-foreground'>
                           GitHub
                         </p>
                         <a
-                          href="#"
-                          className="font-medium text-sm sm:text-base hover:text-primary"
+                          href='#'
+                          className='font-medium text-sm sm:text-base hover:text-primary'
                         >
                           https://github.com/tanvirrifat1
                         </a>
@@ -1891,7 +1981,7 @@ export default function Portfolio() {
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center gap-4 p-3 sm:p-4 rounded-lg bg-muted/50"
+                      className='flex items-center gap-4 p-3 sm:p-4 rounded-lg bg-muted/50'
                       whileHover={{ x: 5 }}
                       transition={{
                         type: "spring",
@@ -1899,16 +1989,16 @@ export default function Portfolio() {
                         damping: 10,
                       }}
                     >
-                      <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                      <div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary'>
+                        <Linkedin className='h-4 w-4 sm:h-5 sm:w-5' />
                       </div>
                       <div>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className='text-xs sm:text-sm text-muted-foreground'>
                           LinkedIn
                         </p>
                         <a
-                          href="#"
-                          className="font-medium text-sm sm:text-base hover:text-primary"
+                          href='#'
+                          className='font-medium text-sm sm:text-base hover:text-primary'
                         >
                           https://www.linkedin.com/in/md-rifat-miah
                         </a>
@@ -1918,8 +2008,8 @@ export default function Portfolio() {
                 </Card>
               </FadeIn>
 
-              <FadeIn direction="up" delay={0.2}>
-                <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
+              <FadeIn direction='up' delay={0.2}>
+                <Card className='border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
                   <CardHeader>
                     <CardTitle>Availability</CardTitle>
                     <CardDescription>
@@ -1927,16 +2017,16 @@ export default function Portfolio() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2">
+                    <div className='space-y-4'>
+                      <div className='flex items-center gap-2'>
                         <Badge
-                          variant="outline"
-                          className="px-3 py-1 text-sm bg-green-500/10 text-green-500 border-green-500/20"
+                          variant='outline'
+                          className='px-3 py-1 text-sm bg-green-500/10 text-green-500 border-green-500/20'
                         >
                           Available for work
                         </Badge>
                       </div>
-                      <p className="text-muted-foreground text-sm sm:text-base">
+                      <p className='text-muted-foreground text-sm sm:text-base'>
                         I'm currently open to new opportunities and projects. My
                         typical working hours are 9 AM to 6 PM (UTC+6), but I'm
                         flexible for international clients.
@@ -1947,8 +2037,8 @@ export default function Portfolio() {
               </FadeIn>
             </div>
 
-            <FadeIn direction="up" delay={0.3}>
-              <Card className="border-none shadow-md bg-gradient-to-br from-background to-muted/80">
+            <FadeIn direction='up' delay={0.3}>
+              <Card className='border-none shadow-md bg-gradient-to-br from-background to-muted/80'>
                 <CardHeader>
                   <CardTitle>Send Me a Message</CardTitle>
                   <CardDescription>
@@ -1956,93 +2046,93 @@ export default function Portfolio() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="grid gap-4" onSubmit={handleSubmit}>
+                  <form className='grid gap-4' onSubmit={handleSubmit}>
                     <motion.div
-                      className="grid gap-2"
+                      className='grid gap-2'
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5 }}
                     >
                       <label
-                        htmlFor="name"
-                        className="text-sm font-medium leading-none"
+                        htmlFor='name'
+                        className='text-sm font-medium leading-none'
                       >
                         Name
                       </label>
                       <input
-                        id="name"
+                        id='name'
                         value={formData.name}
                         onChange={handleChange}
-                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                        placeholder="Your name"
+                        className='flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
+                        placeholder='Your name'
                       />
                     </motion.div>
 
                     <motion.div
-                      className="grid gap-2"
+                      className='grid gap-2'
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.1 }}
                     >
                       <label
-                        htmlFor="email"
-                        className="text-sm font-medium leading-none"
+                        htmlFor='email'
+                        className='text-sm font-medium leading-none'
                       >
                         Email
                       </label>
                       <input
-                        id="email"
-                        type="email"
+                        id='email'
+                        type='email'
                         value={formData.email}
                         onChange={handleChange}
-                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                        placeholder="Your email"
+                        className='flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
+                        placeholder='Your email'
                       />
                     </motion.div>
 
                     <motion.div
-                      className="grid gap-2"
+                      className='grid gap-2'
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.2 }}
                     >
                       <label
-                        htmlFor="subject"
-                        className="text-sm font-medium leading-none"
+                        htmlFor='subject'
+                        className='text-sm font-medium leading-none'
                       >
                         Subject
                       </label>
                       <input
-                        id="subject"
+                        id='subject'
                         value={formData.subject}
                         onChange={handleChange}
-                        className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                        placeholder="Subject of your message"
+                        className='flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
+                        placeholder='Subject of your message'
                       />
                     </motion.div>
 
                     <motion.div
-                      className="grid gap-2"
+                      className='grid gap-2'
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.3 }}
                     >
                       <label
-                        htmlFor="message"
-                        className="text-sm font-medium leading-none"
+                        htmlFor='message'
+                        className='text-sm font-medium leading-none'
                       >
                         Message
                       </label>
                       <textarea
-                        id="message"
+                        id='message'
                         value={formData.message}
                         onChange={handleChange}
-                        className="flex min-h-[120px] sm:min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                        placeholder="Your message"
+                        className='flex min-h-[120px] sm:min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
+                        placeholder='Your message'
                       />
                     </motion.div>
 
@@ -2053,9 +2143,9 @@ export default function Portfolio() {
                       transition={{ duration: 0.5, delay: 0.4 }}
                     >
                       <AnimatedButton
-                        size="lg"
-                        className="w-full mt-2"
-                        type="submit"
+                        size='lg'
+                        className='w-full mt-2'
+                        type='submit'
                       >
                         Send Message
                       </AnimatedButton>
@@ -2069,115 +2159,115 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted/50 border-t">
-        <div className="container px-4 md:px-6 py-8 sm:py-12">
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-3">
-            <FadeIn direction="up" delay={0.1}>
-              <div className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold">
+      <footer className='bg-muted/50 border-t'>
+        <div className='container px-4 md:px-6 py-8 sm:py-12'>
+          <div className='grid gap-6 sm:gap-8 lg:grid-cols-3'>
+            <FadeIn direction='up' delay={0.1}>
+              <div className='space-y-4'>
+                <div className='flex items-center gap-2'>
+                  <div className='h-8 w-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold'>
                     RM
                   </div>
-                  <div className="font-bold text-xl">Rifat Miah</div>
+                  <div className='font-bold text-xl'>Rifat Miah</div>
                 </div>
-                <p className="text-muted-foreground text-sm sm:text-base max-w-xs">
+                <p className='text-muted-foreground text-sm sm:text-base max-w-xs'>
                   A passionate backend developer with full stack experience,
                   dedicated to creating efficient and scalable web applications.
                 </p>
-                <div className="flex items-center gap-4">
+                <div className='flex items-center gap-4'>
                   <motion.a
-                    href="https://github.com/tanvirrifat1"
-                    target="_blank"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    href='https://github.com/tanvirrifat1'
+                    target='_blank'
+                    className='text-muted-foreground hover:text-foreground transition-colors'
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Github className="h-5 w-5" />
-                    <span className="sr-only">GitHub</span>
+                    <Github className='h-5 w-5' />
+                    <span className='sr-only'>GitHub</span>
                   </motion.a>
                   <motion.a
-                    href="https://www.linkedin.com/in/md-rifat-miah-48555b257"
-                    target="_blank"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    href='https://www.linkedin.com/in/md-rifat-miah-48555b257'
+                    target='_blank'
+                    className='text-muted-foreground hover:text-foreground transition-colors'
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
+                    <Linkedin className='h-5 w-5' />
+                    <span className='sr-only'>LinkedIn</span>
                   </motion.a>
                   <motion.a
-                    href="mailto:rifatmiah373@gmail.com"
-                    target="_blank"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    href='mailto:rifatmiah373@gmail.com'
+                    target='_blank'
+                    className='text-muted-foreground hover:text-foreground transition-colors'
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Mail className="h-5 w-5" />
-                    <span className="sr-only">Email</span>
+                    <Mail className='h-5 w-5' />
+                    <span className='sr-only'>Email</span>
                   </motion.a>
                 </div>
               </div>
             </FadeIn>
 
-            <FadeIn direction="up" delay={0.2}>
-              <div className="space-y-4">
-                <h3 className="font-bold text-lg">Quick Links</h3>
-                <nav className="grid gap-2">
+            <FadeIn direction='up' delay={0.2}>
+              <div className='space-y-4'>
+                <h3 className='font-bold text-lg'>Quick Links</h3>
+                <nav className='grid gap-2'>
                   <motion.a
-                    href="#"
+                    href='#'
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(homeRef);
                     }}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base"
+                    className='text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base'
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     Home
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href='#'
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(skillsRef);
                     }}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base"
+                    className='text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base'
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     Skills
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href='#'
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(experienceRef);
                     }}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base"
+                    className='text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base'
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     Experience
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href='#'
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(projectsRef);
                     }}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base"
+                    className='text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base'
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     Projects
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href='#'
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(contactRef);
                     }}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base"
+                    className='text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base'
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
@@ -2187,28 +2277,28 @@ export default function Portfolio() {
               </div>
             </FadeIn>
 
-            <FadeIn direction="up" delay={0.3}>
-              <div className="space-y-4">
-                <h3 className="font-bold text-lg">Newsletter</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
+            <FadeIn direction='up' delay={0.3}>
+              <div className='space-y-4'>
+                <h3 className='font-bold text-lg'>Newsletter</h3>
+                <p className='text-muted-foreground text-sm sm:text-base'>
                   Subscribe to receive updates on my latest projects and tech
                   articles.
                 </p>
                 <motion.form
-                  className="flex flex-col sm:flex-row gap-2"
+                  className='flex flex-col sm:flex-row gap-2'
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
                   <input
-                    type="email"
-                    placeholder="Your email"
-                    className="flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    type='email'
+                    placeholder='Your email'
+                    className='flex h-9 sm:h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
                   />
                   <AnimatedButton
                     onClick={() => alert("Subscribed!")}
-                    className="sm:w-auto"
+                    className='sm:w-auto'
                   >
                     Subscribe
                   </AnimatedButton>
@@ -2218,33 +2308,33 @@ export default function Portfolio() {
           </div>
 
           <motion.div
-            className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4"
+            className='mt-8 sm:mt-12 pt-6 sm:pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="text-center text-xs sm:text-sm text-muted-foreground md:text-left">
+            <p className='text-center text-xs sm:text-sm text-muted-foreground md:text-left'>
               © {new Date().getFullYear()} Rifat Miah. All rights reserved.
             </p>
-            <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground">
+            <div className='flex items-center gap-4 text-xs sm:text-sm text-muted-foreground'>
               <motion.a
-                href="#"
-                className="hover:text-foreground transition-colors"
+                href='#'
+                className='hover:text-foreground transition-colors'
                 whileHover={{ x: 2 }}
               >
                 Privacy Policy
               </motion.a>
               <motion.a
-                href="#"
-                className="hover:text-foreground transition-colors"
+                href='#'
+                className='hover:text-foreground transition-colors'
                 whileHover={{ x: 2 }}
               >
                 Terms of Service
               </motion.a>
               <motion.a
-                href="#"
-                className="hover:text-foreground transition-colors"
+                href='#'
+                className='hover:text-foreground transition-colors'
                 whileHover={{ x: 2 }}
               >
                 Cookie Policy
