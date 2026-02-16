@@ -260,35 +260,41 @@ export default function Portfolio() {
     }));
   };
 
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   console.log(formData);
+  //   e.preventDefault();
+
+  //   try {
+  //     const result = await emailjs.send(
+  //       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "", // ⬅️ Replace with actual EmailJS Service ID
+  //       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "", // ⬅️ Replace with actual Template ID
+  //       {
+  //         name: formData.name,
+  //         email: formData.email,
+  //         subject: formData.subject,
+  //         message: formData.message,
+  //       },
+  //       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "", // ⬅️ Replace with actual Public Key
+  //     );
+
+  //     console.log("Email sent successfully:", result.text);
+  //     alert("Message sent successfully!");
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       subject: "",
+  //       message: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Email send failed:", error);
+  //     alert("Failed to send message.");
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log(formData);
     e.preventDefault();
 
-    try {
-      const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "", // ⬅️ Replace with actual EmailJS Service ID
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "", // ⬅️ Replace with actual Template ID
-        {
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "", // ⬅️ Replace with actual Public Key
-      );
-
-      console.log("Email sent successfully:", result.text);
-      alert("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Email send failed:", error);
-      alert("Failed to send message.");
-    }
+    alert("Message sent successfully!");
   };
 
   return (
@@ -1183,7 +1189,7 @@ export default function Portfolio() {
                         HackerRank and Codeforces to strengthen my algorithmic
                         and logical thinking skills.
                       </p>
-                      <div className='flex gap-1'>
+                      {/* <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1204,7 +1210,7 @@ export default function Portfolio() {
                         <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -1230,7 +1236,7 @@ export default function Portfolio() {
                         evaluate our progress and continuously improve both our
                         team performance and technical skills.
                       </p>
-                      <div className='flex gap-1'>
+                      {/* <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1251,7 +1257,7 @@ export default function Portfolio() {
                         <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -1277,7 +1283,7 @@ export default function Portfolio() {
                         satisfaction, we proceed with the final handover of the
                         project.
                       </p>
-                      <div className='flex gap-1'>
+                      {/* <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1298,7 +1304,7 @@ export default function Portfolio() {
                         <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -1323,7 +1329,7 @@ export default function Portfolio() {
                         to remain effective and relevant in this fast-evolving
                         industry.
                       </p>
-                      <div className='flex gap-1'>
+                      {/* <div className='flex gap-1'>
                         {[...Array(5)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -1344,7 +1350,7 @@ export default function Portfolio() {
                         <span className='text-xs text-muted-foreground'>
                           Expert
                         </span>
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </FadeIn>
