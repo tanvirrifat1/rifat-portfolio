@@ -47,6 +47,7 @@ import { SiHostinger } from "react-icons/si";
 import rifat from "../assets/rifatdb.jpeg";
 import holy from "../assets/holy.png";
 import skinSpired from "../assets/skin.webp";
+import ebakx from "../assets/ebakx.png";
 import hotTube from "../assets/hot-tube.png";
 import baby from "../assets/baby-sitter.png";
 import emailjs from "@emailjs/browser";
@@ -137,7 +138,7 @@ export default function Portfolio() {
               variant={activeSection === "home" ? "default" : "ghost"}
               onClick={() => {
                 scrollToSection(homeRef);
-                document.querySelector("[data-radix-collection-item]")?.click();
+                document.querySelector("[data-radix-collection-item]");
               }}
               className='justify-start w-full'
               size='lg'
@@ -154,7 +155,7 @@ export default function Portfolio() {
               variant={activeSection === "skills" ? "default" : "ghost"}
               onClick={() => {
                 scrollToSection(skillsRef);
-                document.querySelector("[data-radix-collection-item]")?.click();
+                document.querySelector("[data-radix-collection-item]");
               }}
               className='justify-start w-full'
               size='lg'
@@ -171,7 +172,7 @@ export default function Portfolio() {
               variant={activeSection === "experience" ? "default" : "ghost"}
               onClick={() => {
                 scrollToSection(experienceRef);
-                document.querySelector("[data-radix-collection-item]")?.click();
+                document.querySelector("[data-radix-collection-item]");
               }}
               className='justify-start w-full'
               size='lg'
@@ -188,7 +189,7 @@ export default function Portfolio() {
               variant={activeSection === "projects" ? "default" : "ghost"}
               onClick={() => {
                 scrollToSection(projectsRef);
-                document.querySelector("[data-radix-collection-item]")?.click();
+                document.querySelector("[data-radix-collection-item]");
               }}
               className='justify-start w-full'
               size='lg'
@@ -205,7 +206,7 @@ export default function Portfolio() {
               variant={activeSection === "contact" ? "default" : "ghost"}
               onClick={() => {
                 scrollToSection(contactRef);
-                document.querySelector("[data-radix-collection-item]")?.click();
+                document.querySelector("[data-radix-collection-item]");
               }}
               className='justify-start w-full'
               size='lg'
@@ -558,6 +559,15 @@ export default function Portfolio() {
                         className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
                       >
                         TypeScript
+                      </Badge>
+                    </StaggerItem>
+                    {/*  */}
+                    <StaggerItem>
+                      <Badge
+                        variant='outline'
+                        className='px-3 py-1 text-sm bg-background/80 backdrop-blur-sm'
+                      >
+                        Python
                       </Badge>
                     </StaggerItem>
                   </StaggerChildren>
@@ -1400,7 +1410,7 @@ export default function Portfolio() {
                     <Badge className='mb-1'>Current</Badge>
                     <h3 className='text-xl font-bold'>Backend Developer</h3>
                     <p className='text-primary font-medium'>JVAI</p>
-                    <p className='text-sm text-muted-foreground'>1.4 years</p>
+                    <p className='text-sm text-muted-foreground'>1.6 years</p>
                   </div>
                 </FadeIn>
 
@@ -1779,6 +1789,78 @@ export default function Portfolio() {
 
             {/* Project 2 */}
 
+            <FadeIn delay={0.2}>
+              <motion.div
+                whileHover={{ y: -10 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <Card className='group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full'>
+                  <div className='relative aspect-video overflow-hidden'>
+                    <div className='absolute inset-0 bg-gradient-to-t from-background to-transparent z-10'></div>
+                    <Image
+                      src={ebakx}
+                      alt='Project 2'
+                      width={100}
+                      height={100}
+                      className='object-cover w-full h-full'
+                    />
+                  </div>
+                  <CardContent className='p-4 sm:p-6'>
+                    <Badge className='mb-2'>Backend</Badge>
+                    <h3 className='text-lg sm:text-xl font-bold mb-2'>Ebakx</h3>
+                    <p className='text-muted-foreground text-sm sm:text-base mb-4'>
+                      I work on the EBAKX platform as a Backend Developer and
+                      DevOps Engineer, contributing to a scalable e-commerce and
+                      business management system. The application supports four
+                      roles—Buyer, Seller, Admin, and Super Admin—where buyers
+                      purchase products, sellers manage listings, admins over-
+                      see platform activities, and super admins manage system
+                      administration. I develop secure APIs using Node.js,
+                      Express, Socket.io, and integrate payment processing with
+                      Stripe, while continuously improving system performance
+                      and infrastructure.
+                    </p>
+                    <div className='flex flex-wrap gap-2 mb-4'>
+                      <Badge variant='outline'>NextJS</Badge>
+                      <Badge variant='outline'>Socket.IO</Badge>
+                      <Badge variant='outline'>Stripe</Badge>
+                      <Badge variant='outline'>AWS S3</Badge>
+                      <Badge variant='outline'>Node.js</Badge>
+                      <Badge variant='outline'>Express</Badge>
+                      <Badge variant='outline'>MongoDB</Badge>
+                      <Badge variant='outline'>TypeScript</Badge>
+                    </div>
+                    <div className='flex justify-between items-center'>
+                      <AnimatedButton
+                        variant='outline'
+                        size='sm'
+                        className='gap-1'
+                      >
+                        <a
+                          href='https://github.com/tanvirrifat1/qr-management'
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <Github className='h-4 w-4' />
+                        </a>
+                      </AnimatedButton>
+                      <AnimatedButton size='sm' className='gap-1'>
+                        <a
+                          href='https://ebakx.com/'
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <ExternalLink className='h-4 w-4' />
+                        </a>
+                      </AnimatedButton>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </FadeIn>
+
+            {/* Project 3 */}
+
             <FadeIn delay={0.1}>
               <motion.div
                 whileHover={{ y: -10 }}
@@ -1789,7 +1871,7 @@ export default function Portfolio() {
                     <div className='absolute inset-0 bg-gradient-to-t from-background to-transparent z-10'></div>
                     <Image
                       src={hotTube}
-                      alt='Project 2'
+                      alt='Project 3'
                       width={100}
                       height={100}
                       className='object-cover w-full h-full'
@@ -1841,7 +1923,7 @@ export default function Portfolio() {
                 </Card>
               </motion.div>
             </FadeIn>
-            {/* Project 3 */}
+            {/* Project 4 */}
             <FadeIn delay={0.3} className='md:col-span-2 lg:col-span-1'>
               <motion.div
                 whileHover={{ y: -10 }}
@@ -1852,7 +1934,7 @@ export default function Portfolio() {
                     <div className='absolute inset-0 bg-gradient-to-t from-background to-transparent z-10'></div>
                     <Image
                       src={baby}
-                      alt='Project 2'
+                      alt='Project 4'
                       width={100}
                       height={100}
                       className='object-cover w-full h-full'
